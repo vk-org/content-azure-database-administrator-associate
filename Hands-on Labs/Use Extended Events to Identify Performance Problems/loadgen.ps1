@@ -14,7 +14,14 @@ param (
 $database = "acweb"
 $query1 = "INSERT INTO SalesLT.Customer (FirstName, LastName, CompanyName, EmailAddress, PasswordHash, PasswordSalt)
 VALUES ('Delmar', 'Database', 'A Cloud Guru', 'delmar@acloud.guru', 'L/Rlwxzp4w7RWmEgXX+/A7cXaePEPcp+KwQhl2fJL7w=', '1KjXYs4=')"
-$query2 = "SELECT * FROM SalesLT.ProductDescription"
+$query2 = "SELECT p.ProductID, p.Name, pm.Name AS ProductModel, pmx.Culture, pd.Description
+FROM [SalesLT].[Product] p
+INNER JOIN [SalesLT].[ProductModel] pm
+ON p.ProductModelID = pm.ProductModelID
+INNER JOIN [SalesLT].[ProductModelProductDescription] pmx
+ON pm.ProductModelID = pmx.ProductModelID
+INNER JOIN [SalesLT].[ProductDescription] pd
+ON pmx.ProductDescriptionID = pd.ProductDescriptionID"
 
 # Iterator
 $i = 1
