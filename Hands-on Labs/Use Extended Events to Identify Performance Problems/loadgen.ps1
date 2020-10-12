@@ -24,6 +24,7 @@ INNER JOIN [SalesLT].[ProductDescription] pd
 ON pmx.ProductDescriptionID = pd.ProductDescriptionID
 ORDER BY p.ProductID"
 $query3 = "SELECT Name FROM SalesLT.Product ORDER BY ProductID"
+$query4 = "SELECT * FROM SalesLT.ProductDescription"
 
 # Iterator
 $i = 1
@@ -33,6 +34,7 @@ function run_sql {
     Invoke-SQLCMD -ServerInstance $instance -Database $database -Query $query1 -Username delmar -Password "AwesomePassword!"
     Invoke-SQLCMD -ServerInstance $instance -Database $database -Query $query2 -Username delmar -Password "AwesomePassword!"
     Invoke-SQLCMD -ServerInstance $instance -Database $database -Query $query3 -Username delmar -Password "AwesomePassword!"
+    Invoke-SQLCMD -ServerInstance $instance -Database $database -Query $query4 -Username delmar -Password "AwesomePassword!"
 }
 
 # Infinitely loop and call the run_sql function
