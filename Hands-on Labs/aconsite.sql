@@ -1,7 +1,8 @@
 --------------------------------------------------------------------------------
 -- Source: A Cloud Guru 'Azure Database Administrator Associate (DP-300)' Course
 -- Author: Landon Fowler
--- Purpose: SQL script for creating the 'acsales' database structures.
+-- Purpose: SQL script for creating the 'aconsite' database structures.
+-- Date Updated: 11\12\2020
 --------------------------------------------------------------------------------
 
 -- Create the schemas
