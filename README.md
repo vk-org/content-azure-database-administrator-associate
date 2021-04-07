@@ -5,6 +5,3 @@ Welcome to the official repo for the A Cloud Guru "Azure Database Administrator 
 I hope that this content is useful both for those in the course as well as anyone else wanting to learn about administering Azure relational databases.
 
 Happy learning!
-
-Landon Fowler
-
